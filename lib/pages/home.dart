@@ -13,6 +13,22 @@ class _HomeCodigoBarraState extends State<HomeCodigoBarra> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: primary, title: Text("DTI Personal")),
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 250,
+              width: 250,
+              child: Image.asset("assets/images/codigo_barra.png"),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
