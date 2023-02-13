@@ -1,4 +1,5 @@
 import 'package:codigo_barra_personal/constant/colores.dart';
+import 'package:codigo_barra_personal/pages/generar_codigo.dart';
 import 'package:codigo_barra_personal/widgets/elevation_button.dart';
 import 'package:codigo_barra_personal/widgets/elevation_button_ver.dart';
 import 'package:flutter/material.dart';
@@ -23,17 +24,57 @@ class _HomeCodigoBarraState extends State<HomeCodigoBarra> {
             SizedBox(
               height: 210,
               width: 210,
-              child: Image.asset("assets/images/codigo_barra.png"),
+              child: Image.asset("assets/images/UPeU_azul.png"),
             ),
             SizedBox(
               height: 20,
             ),
-            elevationButton,
+
+            //---Botones---//
+
+            Container(
+              height: 65,
+              width: double.infinity,
+              margin: EdgeInsets.only(right: 30, top: 0, left: 38, bottom: 0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.red,
+              ),
+              child:
+                  textButton("Generar código de barra", GenerarCodigoBarra()),
+            ),
             SizedBox(
               height: 20,
             ),
-            verCodigo,
+            Container(
+                height: 65,
+                width: double.infinity,
+                margin: EdgeInsets.only(right: 30, top: 0, left: 38, bottom: 0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: primary,
+                ),
+                child:
+                    textButton("Ver códigos generados", GenerarCodigoBarra())),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget textButton(String text, Widget widget) {
+    return TextButton(
+      onPressed: () {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return widget;
+        }));
+      },
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
         ),
       ),
     );
