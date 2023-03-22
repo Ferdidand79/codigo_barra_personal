@@ -1,6 +1,8 @@
 import 'package:codigo_barra_personal/constant/colores.dart';
 import 'package:codigo_barra_personal/pages/generar_codigo.dart';
 import 'package:codigo_barra_personal/pages/generar_guardar.dart';
+import 'package:codigo_barra_personal/pages/generar_qr.dart';
+import 'package:codigo_barra_personal/pages/scan_qr.dart';
 import 'package:codigo_barra_personal/widgets/elevation_button.dart';
 import 'package:codigo_barra_personal/widgets/elevation_button_ver.dart';
 import 'package:flutter/material.dart';
@@ -44,6 +46,18 @@ class _HomeCodigoBarraState extends State<HomeCodigoBarra> {
               child:
                   textButton("Generar código de barra", GenerarCodigoBarra()),
             ),
+            /*SizedBox(
+              height: 20,
+            ),
+            Container(
+                height: 65,
+                width: double.infinity,
+                margin: EdgeInsets.only(right: 30, top: 0, left: 38, bottom: 0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: primary,
+                ),
+                child: textButton("Ver códigos generados", GenerarGuardar())),*/
             SizedBox(
               height: 20,
             ),
@@ -55,7 +69,19 @@ class _HomeCodigoBarraState extends State<HomeCodigoBarra> {
                   borderRadius: BorderRadius.circular(15),
                   color: primary,
                 ),
-                child: textButton("Ver códigos generados", GenerarGuardar())),
+                child: textButton("Sacanear QR", ScanQr())),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+                height: 65,
+                width: double.infinity,
+                margin: EdgeInsets.only(right: 30, top: 0, left: 38, bottom: 0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: primary,
+                ),
+                child: textButton("Generar QR", GenerarQr())),
           ],
         ),
       ),
