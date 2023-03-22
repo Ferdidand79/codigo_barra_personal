@@ -1,5 +1,6 @@
 import 'package:codigo_barra_personal/constant/colores.dart';
 import 'package:codigo_barra_personal/pages/generar_codigo.dart';
+import 'package:codigo_barra_personal/pages/generar_guardar.dart';
 import 'package:codigo_barra_personal/widgets/elevation_button.dart';
 import 'package:codigo_barra_personal/widgets/elevation_button_ver.dart';
 import 'package:flutter/material.dart';
@@ -54,8 +55,7 @@ class _HomeCodigoBarraState extends State<HomeCodigoBarra> {
                   borderRadius: BorderRadius.circular(15),
                   color: primary,
                 ),
-                child:
-                    textButton("Ver códigos generados", GenerarCodigoBarra())),
+                child: textButton("Ver códigos generados", GenerarGuardar())),
           ],
         ),
       ),
